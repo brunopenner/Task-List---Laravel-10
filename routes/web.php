@@ -14,5 +14,28 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index', [
+        'name' => 'Bruno',
+    ]);
 });
+
+Route::get('/hello', function () {
+    return "<h1>Hello Page</h1>";
+})->name('hello');
+
+Route::get('/hallo', function () {
+    return redirect()->route('hello');
+});
+
+Route::get('/greet/{name}', function ($name) {
+    return 'Hello ' . $name . '!';
+});
+
+Route::fallback(function () {
+    return '<h1>Still got somewhere...</h1>';
+});
+
+// GET
+// POST
+// PUT
+// DELETE
