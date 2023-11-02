@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Laravel 10 Task List App</title>
-
+    <script src="https://cdn.tailwindcss.com"></script>
     @yield('styles')
 </head>
 <body>
-    <style>
+    {{-- <style>
         body {
             padding: 50px;
         }
@@ -23,7 +23,7 @@
         a {
             color: white;
         }
-    </style>
+    </style> --}}
 
     <div class="hero">
         <h1>@yield('title')</h1>
